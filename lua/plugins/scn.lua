@@ -12,9 +12,9 @@ return {
       local is_windows = vim.loop.os_uname().sysname:find "Windows" ~= nil
 
       local config = {
-        -- documentation = {
-        --   cmd = { "sclang" }, -- Linux default
-        -- },
+        documentation = {
+          cmd = { "pandoc" }, -- Linux default
+        },
         keymaps = {
           ["<C-CR>"] = map("editor.send_line", { "i", "n" }),
           ["<A-CR>"] = map("editor.send_block", { "n", "i", "x", "v" }),
@@ -27,18 +27,6 @@ return {
         editor = {
           highlight = { color = "IncSearch" },
         },
-        postwin = {
-          cmd = "tmux",
-        },
-        extensions = {
-          tmux = {
-            path = vim.fn.tempname(),
-            horizontal = true,
-            size = "15%",
-            cmd = "tail",
-            args = { "-F", "$1" },
-          },
-        },
         on_ready = function()
           require("scnvim.help").render_all()
         end,
@@ -49,10 +37,26 @@ return {
           cmd = "C:/Program Files/SuperCollider-3.13.0/sclang.exe",
         }
         config.documentation.cmd = { "pandoc" }
+      else
+        config.postwin = {
+          cmd = "tmux",
+        }
+        config.extensions = {
+          tmux = {
+            path = vim.fn.tempname(),
+            horizontal = true,
+            size = "15%",
+            cmd = "tail",
+            args = { "-F", "$1" },
+          },
+        }
       end
 
       scnvim.setup(config)
-      scnvim.load_extension "tmux"
+
+      if not is_windows then
+        scnvim.load_extension "tmux"
+      end
     end,
     keys = {
       { "<C-l>", desc = "SCNvim: Hard Stop", mode = { "n", "x", "i" }, ft = "supercollider" },

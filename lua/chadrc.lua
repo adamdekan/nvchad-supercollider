@@ -18,13 +18,11 @@ M.ui = {
   statusline = {
     theme = "default",
     separator_style = "round",
-    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor", "abc" },
+    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor", "scn" },
     modules = {
-      abc = function()
-        return "||| SC "
-        -- return require("scnvim").statusline.get_server_status()
+      scn = function()
+        return "||| SC " .. require("scnvim.statusline").get_server_status()
       end,
-
       xyz = "hi",
       f = "%F",
     },

@@ -9,6 +9,7 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map("n", "<leader>qq", ":q!<CR>", { desc = "Quit Neovim "})
 map("n", "<leader>ss", ":SCNvimStart<CR>", { desc = "Start SClang"})
+map("n", "<leader>sl", ":SCNvimStatusLine<CR>", { desc = "SC Statusline"})
 
 -- Scroll and center
 map("n", "<C-d>", "<C-d>zz", opts)
