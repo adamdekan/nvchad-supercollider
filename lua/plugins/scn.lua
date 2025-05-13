@@ -18,8 +18,9 @@ return {
         keymaps = {
           ["<C-CR>"] = map("editor.send_line", { "i", "n" }),
           ["<A-CR>"] = map("editor.send_block", { "n", "i", "x", "v" }),
-          ["\\"] = map("sclang.hard_stop", { "n", "x", "i" }),
+          ["\\"] = map("postwin.toggle", { "n", "x", "i" }),
           ["<A-\\>"] = map("postwin.toggle", { "n", "x", "i" }),
+          ["<A-s>"] = map("sclang.hard_stop", { "n", "x", "i" }),
           ["<leader>sk"] = map("sclang.recompile", { "n" }),
           ["<leader>sb"] = map_expr "s.boot",
           ["<leader>sr"] = map_expr "s.reboot",
@@ -43,12 +44,18 @@ return {
           cmd = "tmux",
         }
         config.extensions = {
+          -- tmux = {
+          --   path = vim.fn.tempname(),
+          --   horizontal = true,
+          --   size = "15%",
+          --   cmd = "tail",
+          --   args = { "-F", "$1" },
+          -- },
           tmux = {
-            path = vim.fn.tempname(),
+            cmd = "scnvim-tmux.sh",
+            args = { "$1" },
             horizontal = true,
-            size = "15%",
-            cmd = "tail",
-            args = { "-F", "$1" },
+            size = "14%",
           },
         }
       end
