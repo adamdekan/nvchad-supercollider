@@ -1,8 +1,9 @@
-**This repo is supposed to used as config by NvChad users!**
+**This is valid configuration for useage of NVChad with Supercollider**
 
-- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
-- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
-- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+Main configuration is in file scn.lua - that is in theory all necessary to make Supercollider work well within NVChad.
+For treesitter help search to work correctly, install pandoc and run:
+
+:lua require('scnvim.help').render_all()
 
 # Credits
 

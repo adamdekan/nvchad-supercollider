@@ -1,0 +1,23 @@
+init
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .stylua.toml
+#	new file:   LICENSE
+#	new file:   README.md
+#	new file:   init.lua
+#	new file:   lazy-lock.json
+#	new file:   lua/chadrc.lua
+#	new file:   lua/configs/conform.lua
+#	new file:   lua/configs/lazy.lua
+#	new file:   lua/configs/lspconfig.lua
+#	new file:   lua/mappings.lua
+#	new file:   lua/options.lua
+#	new file:   lua/plugins/init.lua
+#	new file:   lua/plugins/scn.lua
+#
