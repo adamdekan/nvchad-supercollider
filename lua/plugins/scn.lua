@@ -19,6 +19,7 @@ return {
           ["<C-CR>"] = map("editor.send_line", { "i", "n" }),
           ["<A-CR>"] = map("editor.send_block", { "n", "i", "x", "v" }),
           ["\\"] = map("sclang.hard_stop", { "n", "x", "i" }),
+          ["<A-\\>"] = map("postwin.toggle", { "n", "x", "i" }),
           ["<leader>sk"] = map("sclang.recompile", { "n" }),
           ["<leader>sb"] = map_expr "s.boot",
           ["<leader>sr"] = map_expr "s.reboot",
