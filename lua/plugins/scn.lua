@@ -13,7 +13,7 @@ return {
 
       local config = {
         documentation = {
-          cmd = { "pandoc" }, -- Linux default
+          cmd = "pandoc" -- Linux default
         },
         keymaps = {
           ["<C-CR>"] = map("editor.send_line", { "i", "n" }),
@@ -38,7 +38,7 @@ return {
         config.sclang = {
           cmd = "C:/Program Files/SuperCollider-3.13.0/sclang.exe",
         }
-        config.documentation.cmd = { "pandoc" }
+        config.documentation.cmd = "pandoc"
       else
         config.postwin = {
           cmd = "tmux",
