@@ -3,7 +3,7 @@ local options = {
     lua = { "stylua" },
     css = { "prettier" },
     html = { "prettier" },
-    python = { "ruff" },
+    python = { "ruff_format" },
   },
 
   format_on_save = {

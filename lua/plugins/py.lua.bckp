@@ -1,0 +1,10 @@
+return {
+  {
+    "wiliamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "pyright",
+      },
+    },
+  },
+}

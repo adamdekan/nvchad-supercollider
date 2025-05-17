@@ -5,6 +5,8 @@
 ---@type ChadrcConfig
 local M = {}
 
+M.mason = { pkgs = { "pyright", "ruff" } }
+
 M.base46 = {
   theme = "tokyonight",
 
