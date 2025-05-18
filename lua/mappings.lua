@@ -7,7 +7,7 @@ local opts = { noremap = true, silent = true }
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-map("n", "<leader>qq", ":q!<CR>", { desc = "Quit Neovim " })
+map("n", "<leader>qq", ":qa!<CR>", { desc = "Quit Neovim " })
 map("n", "<leader>ss", ":SCNvimStart<CR>", { desc = "Start SClang" })
 map("n", "<leader>sl", ":SCNvimStatusLine<CR>", { desc = "SC Statusline" })
 map("n", "<leader>gp", ":!git add . ;git commit -m 'push';git push<CR>", { desc = "Git Add/Comm/Push" })
