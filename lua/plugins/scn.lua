@@ -22,6 +22,7 @@ return {
           ["<A-\\>"] = map("postwin.toggle", { "n", "x", "i" }),
           ["<A-s>"] = map("sclang.hard_stop", { "n", "x", "i" }),
           ["<leader>sk"] = map("sclang.recompile", { "n" }),
+          ["<leader>sc"] = map("postwin.clear", { "n" }),
           ["<leader>sb"] = map_expr "s.boot",
           ["<leader>sr"] = map_expr "s.reboot",
           ["<leader>sm"] = map_expr "s.meter",
@@ -44,18 +45,11 @@ return {
           cmd = "tmux",
         }
         config.extensions = {
-          -- tmux = {
-          --   path = vim.fn.tempname(),
-          --   horizontal = true,
-          --   size = "15%",
-          --   cmd = "tail",
-          --   args = { "-F", "$1" },
-          -- },
           tmux = {
             cmd = "scnvim-tmux.sh",
             args = { "$1" },
-            horizontal = true,
-            size = "14%",
+            horizontal = false,
+            size = "50%",
           },
         }
       end
@@ -72,6 +66,7 @@ return {
       { "<leader>sb", desc = "SCNvim: s.boot()", mode = "n", ft = "supercollider" }, -- Assuming these map_expr are typically normal mode
       { "<leader>sr", desc = "SCNvim: s.reboot()", mode = "n", ft = "supercollider" },
       { "<leader>sm", desc = "SCNvim: s.meter()", mode = "n", ft = "supercollider" },
+      { "<leader>sc", desc = "SCNvim: Postwin clear", mode = "n", ft = "supercollider" },
     },
   }, -- End of scnvim plugin spec, comma added
 

@@ -1,5 +1,11 @@
 require "nvchad.mappings"
 
+local function save_and_notify()
+  vim.cmd('w!')
+  local filename = vim.fn.expand('%:t')
+  vim.notify(filename .. " saved!", vim.log.levels.INFO)
+end
+
 -- add yours here
 
 local map = vim.keymap.set
@@ -34,6 +40,7 @@ map("i", "<C-k>", "<Up>", opts)
 map("i", "<C-l>", "<Right>", opts)
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map({'n', 'i', 'v'}, '<c-s>', save_and_notify, { desc = "Save file and notify" })
 
 -- Jump to next "(" at beginning of a line
 map("n", "<A-]>", "/^(<CR>", { noremap = true })

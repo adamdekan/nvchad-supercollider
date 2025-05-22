@@ -21,5 +21,12 @@ return {
       inc_rename = false,
       lsp_doc_border = false,
     },
+    views = {
+      notify = {
+        size = {
+          width = 30,
+        },
+      },
+    },
   },
 }
