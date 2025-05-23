@@ -67,7 +67,7 @@ local unpack = unpack or table.unpack
 -- <leader>gp : Git add . && commit -m "Update" && push
 map("n", "<leader>gp", function()
   vim.cmd("silent !git add .")
-  vim.cmd("silent !git commit -m 'Update'")
+  vim.cmd("silent !git commit -m update")
   vim.cmd("silent !git push")
   print("✓ Git pushed: Update")
 end, { desc = "Git add, commit ('Update'), and push", unpack(opts) })
