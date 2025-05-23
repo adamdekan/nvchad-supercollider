@@ -1,7 +1,9 @@
 if vim.g.neovide then
-  -- Put anything you want to happen only in Neovide here
   vim.o.guifont = "JetBrainsMono Nerd Font:h11" -- text below applies for VimScript
+  vim.g.neovide_title_background_color =
+    string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name "Normal" }).bg)
 end
+
 
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
