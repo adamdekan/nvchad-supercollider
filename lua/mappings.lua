@@ -71,6 +71,7 @@ map("n", "<leader>gp", function()
   vim.cmd("silent !git push")
   print("✓ Git pushed: Update")
 end, { desc = "Git add, commit ('Update'), and push", unpack(opts) })
+-- test
 
 -- <leader>gP : Git pull
 map("n", "<leader>gP", function()
