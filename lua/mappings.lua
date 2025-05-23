@@ -62,3 +62,18 @@ vim.keymap.set("n", "<leader>rr", function()
   vim.cmd "luafile $MYVIMRC"
   print "Lua reloaded!!"
 end, { desc = "Reload lua file" })
+
+local unpack = unpack or table.unpack
+-- <leader>gp : Git add . && commit -m "Update" && push
+map("n", "<leader>gp", function()
+  vim.cmd("silent !git add .")
+  vim.cmd("silent !git commit -m 'Update'")
+  vim.cmd("silent !git push")
+  print("✓ Git pushed: Update")
+end, { desc = "Git add, commit ('Update'), and push", unpack(opts) })
+
+-- <leader>gP : Git pull
+map("n", "<leader>gP", function()
+  vim.cmd("silent !git pull")
+  print("✓ Git pulled")
+end, { desc = "Git pull", unpack(opts) })
