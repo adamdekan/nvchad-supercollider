@@ -1,9 +1,17 @@
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font:h11" -- text below applies for VimScript
+  -- vim.o.guifont = "Hack Nerd Font:h11" -- text below applies for VimScript
+  vim.api.nvim_set_keymap("n", "<F11>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {})
   vim.g.neovide_title_background_color =
     string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name "Normal" }).bg)
+  vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+      vim.cmd "cd C:\\Users\\ADekan\\Desktop\\sc\\sc-projects"
+    end,
+  })
 end
 
+-- terminal wrap
+-- vim.wo.wrap = true
 
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "

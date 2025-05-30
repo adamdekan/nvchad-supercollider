@@ -33,6 +33,7 @@
   "nvim-treesitter": { "branch": "master", "commit": "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79" },
   "nvim-web-devicons": { "branch": "master", "commit": "f1420728f59843eb2ef084406b3d0201a0a0932d" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
+  "sclang-format.nvim": { "branch": "main", "commit": "7878c78f5de6a544b0405d0d30cdb7e40ddae8ba" },
   "scnvim": { "branch": "main", "commit": "7fcfd73d6d3b4cf6a31f62f07de3e35744962a20" },
   "scnvim-tmux": { "branch": "main", "commit": "96112409d6034ab8dd297f779631c77bb2dc9a8a" },
   "telescope-scdoc.nvim": { "branch": "main", "commit": "e5e13a782829655ca2079705cf4a48d6d9ac6369" },

@@ -8,7 +8,7 @@ local M = {}
 M.mason = { pkgs = { "pyright", "ruff" } }
 
 M.base46 = {
-  theme = "flouromachine",
+  theme = "chadracula",
 
   -- hl_override = {
   -- 	Comment = { italic = true },

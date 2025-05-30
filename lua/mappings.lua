@@ -11,6 +11,12 @@ end
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- experimental
+map("n", "<C-w>q", function()
+  require("nvchad.tabufline").close_buffer() -- closes current buffer
+  vim.cmd("close") -- closes the window split
+end, { desc = "Close buffer and window" })
+
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map("n", "<leader>qq", ":qa!<CR>", { desc = "Quit Neovim " })
