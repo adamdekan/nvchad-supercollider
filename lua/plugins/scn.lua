@@ -37,7 +37,7 @@ return {
 
       if is_windows then
         config.sclang = {
-          cmd = "C:/Program Files/SuperCollider-3.13.0/sclang.exe",
+          cmd = "C:/sc/sclang.exe",
         }
         config.documentation.cmd = "pandoc"
       else
